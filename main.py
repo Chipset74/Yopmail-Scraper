@@ -16,7 +16,6 @@ class yopMail:
 
     def getCaptcha(self): # This is an XEvil call, not 2captcha
         req = requests.get("http://www.2captcha.com/in.php?key=b7b7cc9e4c063eb60b88afd45495635f&method=userrecaptcha&googlekey=6LcG5v8SAAAAAOdAn2iqMEQTdVyX8t0w9T3cpdN2&pageurl=https://yopmail.com").text
-        print(req)
         captcha = req.split("|")[1]
         notFound = True
         while notFound:
